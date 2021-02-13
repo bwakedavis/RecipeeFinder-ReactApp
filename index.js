@@ -1,9 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const path = require('path')
+const path = require('path');
+const expressHds = require('express-handlebars');
 const app = express();
 
-app.set('view engine', 'pug');
+
+app.set('view engine', 'ejs');
+
 app.set('views', 'views');
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop')
