@@ -18,7 +18,7 @@ app.use('/admin',adminRoutes.router);
 app.use(shopRoutes);
 
 app.use((req, res, next)=>{
-    res.status(404).render('404');
+    res.status(404).render('404', {docTitle: "Shop"});
 })
 
 
